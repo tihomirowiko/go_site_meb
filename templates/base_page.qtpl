@@ -1,0 +1,24 @@
+{% interface
+Page {
+	Title()
+	Body()
+}
+%}
+
+Page prints a page implementing Page interface.
+{% func PageTemplate(p Page) %}
+<!DOCTYPE html>
+<html>
+	<head>
+    <meta charset="utf-8">
+		<title>{%= p.Title() %}</title>
+	</head>
+	<body>
+		{%= p.Body() %}
+	</body>
+</html>
+{% endfunc %}
+
+{% code type BasePage struct {} %}
+{% func (p *BasePage) Title() %}This is a base title{% endfunc %}
+{% func (p *BasePage) Body() %}This is a base body{% endfunc %}
