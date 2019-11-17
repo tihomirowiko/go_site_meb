@@ -1,6 +1,8 @@
 {% interface
 Page {
 	Title()
+    Link()
+    Script()
 	Body()
 }
 %}
@@ -10,10 +12,26 @@ Page prints a page implementing Page interface.
 <!DOCTYPE html>
 <html>
 	<head>
-    <meta charset="utf-8">
+        <meta charset="utf-8">
 		<title>{%= p.Title() %}</title>
+        
+        <!--Import Google Icon Font-->
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <!--Import materialize.css-->
+        <link type="text/css" rel="stylesheet" href="/static/css/materialize.min.css"  media="screen,projection"/>
+        {%= p.Link() %}
+        
+        <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+        <script type="text/javascript" src="/static/js/materialize.min.js"></script>
+        <link rel="stylesheet" href="/static/css/style.css">
+        {%= p.Script() %}
 	</head>
 	<body>
+        <nav>
+            <div class="nav-wrapper">
+                <a href="#" class="brand-logo">Мебель</a>
+            </div>
+        </nav>
 		{%= p.Body() %}
 	</body>
 </html>

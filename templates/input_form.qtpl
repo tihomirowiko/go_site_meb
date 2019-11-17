@@ -7,6 +7,14 @@ type MainPage struct {}
 	Main Page
 {% endfunc %}
 
+{% func (p *MainPage) Link() %}
+    
+{% endfunc %}
+
+{% func (p *MainPage) Script() %}
+	
+{% endfunc %}
+
 
 {% func (p *MainPage) Body() %}
 <form>

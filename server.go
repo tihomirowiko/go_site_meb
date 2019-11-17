@@ -27,11 +27,16 @@ func QueryArgs( ctx *fasthttp.RequestCtx ) {
 	name := ctx.QueryArgs().Peek( "name" )
 	fmt.Fprintf( ctx, "Pong! %s\n", string( name ) )
 }
+
+func Styles( ctx *fasthttp.RequestCtx ) {
+}
     
 func main() {
     flag.Parse()
     
     r := router.New()
+    r.ServeFiles( "/static/*filepath", "static" )
+    
 	r.GET( "/", Index )
 	r.GET( "/hello/:name", Hello )
     r.GET( "/ping", QueryArgs )

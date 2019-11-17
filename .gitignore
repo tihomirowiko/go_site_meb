@@ -1,3 +1,4 @@
 *.exe
 github.com
 pkg
+*.qtpl.go
