@@ -17,6 +17,57 @@ type MainPage struct {}
 
 
 {% func (p *MainPage) Body() %}
+<div class="container">
+    <div class="row">
+        <div class="col xl3 l4 m6 s12 center-align">
+            <img src="/static/icons/logo.png" height="50" width="100">
+            <h4>Text</h4>
+            <p>
+                Is it possible today?
+                What do you think about using an ENV VAR at compile time to
+            </p>
+        </div>
+        <div class="col xl3 l4 m6 s12 center-align">
+            <img src="/static/icons/logo.png" height="50" width="100">
+            <h4>Text</h4>
+            <p>
+                Is it possible today?
+                What do you think about using an ENV VAR at compile time to
+            </p>
+        </div>
+        <div class="col xl3 l4 m6 s12 center-align">
+            <img src="/static/icons/logo.png" height="50" width="100">
+            <h4>Text</h4>
+            <p>
+                Is it possible today?
+                What do you think about using an ENV VAR at compile time to
+            </p>
+        </div>
+        <div class="col xl3 l4 m6 s12 center-align">
+            <img src="/static/icons/logo.png" height="50" width="100">
+            <h4>Text</h4>
+            <p>
+                Is it possible today?
+                What do you think about using an ENV VAR at compile time to
+            </p>
+        </div>
+    </div>
+</div>
+
+<div class="container carousel carousel-slider">
+    <a href="#one!" class="carousel-item"><img src="/static/icons/1.jpeg" alt=""></a>
+    <a href="#two!" class="carousel-item"><img src="/static/icons/2.jpeg" alt=""></a>
+    <a href="#three!" class="carousel-item"><img src="/static/icons/3.jpeg" alt=""></a>
+</div>
+<script>
+    $( document ).ready( function () {
+        $( ".carousel.carousel-slider").carousel({
+            fullWidth:true,
+            indicators:true
+        })
+    })
+</script>
+
 <form>
     <p><input name="login"> <input type="password" name="pass"></p>
     <p><input type="submit"></p>    
